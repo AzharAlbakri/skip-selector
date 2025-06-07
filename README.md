@@ -7,7 +7,7 @@ A simple and responsive React component that allows users to compare and select 
 
 - **Purpose**: The component offers an intuitive way to compare 4, 6, and 8-yard skips, commonly used for garden waste, driveways, and renovations.
 - **Technologies Used**:
-  - React (with Vite for fast development)
+  - React
   - Tailwind CSS (for responsive and modern styling)
   - Font Awesome (via CDN for clean icons)
 - **Challenges**:

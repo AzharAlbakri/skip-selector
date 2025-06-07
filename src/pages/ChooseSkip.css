@@ -4,7 +4,7 @@
   padding: 24px;
 }
 
-.choose-skip-page h1 {
+.choose-skip-page h2 {
   text-align: center;
   margin-bottom: 32px;
   font-size: 32px;
@@ -13,8 +13,8 @@
 
 .skip-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .loading {
@@ -22,3 +22,43 @@
   margin-top: 40px;
   font-size: 20px;
 }
+
+@media (max-width: 992px) {
+  .skip-list {
+    grid-template-columns: repeat(2, 1fr); /* صفين عند الشاشات المتوسطة */
+  }
+}
+
+@media (max-width: 600px) {
+  .skip-list {
+    grid-template-columns: 1fr; /* بطاقة واحدة لكل صف على الموبايل */
+  }
+}
+
+<!-- في index.html -->
+<style>
+  body.light {
+    background-color: #f7faff;
+    color: #222;
+  }
+  body.dark {
+    background-color: #121212;
+    color: #fff;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: #eee;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  body.dark .theme-toggle {
+    background: #333;
+    color: white;
+  }
+
+  
